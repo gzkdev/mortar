@@ -32,7 +32,7 @@ export function Profile() {
             disabled={isLoading && connector.id == pendingConnector?.id}
             key={connector.id}
             onClick={() => connect({ connector })}
-            className="py-3 bg-slate-800 rounded-2xl flex-grow disabled:opacity-50"
+            className="py-3 border rounded-2xl flex-grow disabled:opacity-50"
           >
             {connector.name}
           </button>
