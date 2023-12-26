@@ -1,17 +1,8 @@
 "use client";
-import {
-  useAccount,
-  useConnect,
-  useDisconnect,
-  useEnsAvatar,
-  useEnsName,
-} from "wagmi";
-import ClientComponent from "../ClientComponent";
+import { useAccount, useConnect, useDisconnect, useEnsName } from "wagmi";
 
-export default function Profile() {
+export function Profile() {
   const { address, connector, isConnected } = useAccount();
-
-  //   const { data: ensAvatar } = useEnsAvatar({ address });
   const { data: ensName } = useEnsName({ address });
   const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect();
@@ -19,8 +10,7 @@ export default function Profile() {
 
   if (isConnected) {
     return (
-      <ClientComponent>
-        {/* {ensAvatar && <img src={ensAvatar!} alt="ENS Avatar" />} */}
+      <>
         <div>{ensName ? `${ensName} (${address})` : address}</div>
         <div>Connected to {connector?.name}</div>
         <button
@@ -29,12 +19,12 @@ export default function Profile() {
         >
           Disconnect
         </button>
-      </ClientComponent>
+      </>
     );
   }
 
   return (
-    <ClientComponent>
+    <>
       <div className="text-white">Profile</div>
       <div className="flex flex-col gap-2 w-[320px] text-center">
         {connectors.map((connector) => (
@@ -45,16 +35,11 @@ export default function Profile() {
             className="py-3 bg-slate-800 rounded-2xl flex-grow disabled:opacity-50"
           >
             {connector.name}
-            {/* {` ${connector.ready}`} */}
-            {/* {!connector.ready && " (unsupported)"}
-          {isLoading &&
-            connector.id === pendingConnector?.id &&
-            " (connecting)"} */}
           </button>
         ))}
 
         {error && <div className="text-red-500 text-sm">{error.message}</div>}
       </div>
-    </ClientComponent>
+    </>
   );
 }
