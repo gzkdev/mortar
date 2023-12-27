@@ -1,5 +1,4 @@
 "use client";
-import { ReactNode } from "react";
 
 import {
   WagmiConfig,
@@ -13,11 +12,14 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
-import { InjectedConnector } from "wagmi/connectors/injected";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 
-export default function Web3Provider({ children }: { children: ReactNode }) {
+export default function Web3Provider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [sepolia, mainnet],
     [
@@ -40,13 +42,6 @@ export default function Web3Provider({ children }: { children: ReactNode }) {
         chains,
         options: {
           projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_ID,
-        },
-      }),
-      new InjectedConnector({
-        chains,
-        options: {
-          name: "Injected",
-          shimDisconnect: true,
         },
       }),
     ],
