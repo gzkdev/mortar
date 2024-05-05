@@ -44,7 +44,7 @@ NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=
 npm run dev
 ```
 
-Voila! Now your can cook the next big blockchain app
+Voila! Happy Cooking 🧑🏾‍🍳
 
 ## Contributions
 
