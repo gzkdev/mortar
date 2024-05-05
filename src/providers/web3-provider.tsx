@@ -1,7 +1,12 @@
 "use client";
 
 import { mainnet } from "wagmi/chains";
-import { WagmiProvider, createConfig } from "wagmi";
+import {
+  WagmiProvider,
+  createConfig,
+  createStorage,
+  cookieStorage,
+} from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 
@@ -13,6 +18,10 @@ const config = createConfig(
     appDescription: "A light weight blueprint for building decentralized apps",
     appUrl: "https://family.co",
     appIcon: "https://family.co/logo.png",
+    ssr: true,
+    storage: createStorage({
+      storage: cookieStorage,
+    }),
   })
 );
 
