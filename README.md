@@ -35,8 +35,7 @@ npm install
 - Checkout the `.env.example` file and add the following environment variables
 
 ```bash
-NEXT_PUBLIC_WALLET_CONNECT_ID=
-NEXT_PUBLIC_ALCHEMY_API_KEY=
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=
 ```
 
 - Start the app
