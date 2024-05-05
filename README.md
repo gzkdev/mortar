@@ -12,7 +12,7 @@ A light weight blueprint for building decentralized apps
 - Viem
 - Wagmi
 
-## Getting Started
+## Local development
 
 - Clone the repo
 
@@ -32,7 +32,7 @@ cd mortar
 npm install
 ```
 
-- Checkout the `.env.example` file and add the following environment variables
+- Create a `.env.local` file and add the following environment variables like in the `.env.example` file
 
 ```bash
 NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=
