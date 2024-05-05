@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Web3Provider } from "@/providers/web3-provider";
 
 export const metadata: Metadata = {
   title: "Mortar",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Web3Provider>
+        <body>{children}</body>
+      </Web3Provider>
     </html>
   );
 }
