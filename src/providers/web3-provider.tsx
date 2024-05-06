@@ -16,8 +16,8 @@ const config = createConfig(
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
     appName: "Mortar",
     appDescription: "A light weight blueprint for building decentralized apps",
-    appUrl: "https://family.co",
-    appIcon: "https://family.co/logo.png",
+    appUrl: "https://mortar-dusky.vercel.app/", // Add the url of your app
+    appIcon: "https://family.co/logo.png", // Add the url of your icon
     ssr: true,
     storage: createStorage({
       storage: cookieStorage,
