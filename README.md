@@ -44,6 +44,8 @@ NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=
 npm run dev
 ```
 
+- Navigate to [http://localhost:3000](http://localhost:3000) in your browser to view the app
+
 Voila! Happy Cooking 🧑🏾‍🍳
 
 ## Contributions
