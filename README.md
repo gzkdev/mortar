@@ -7,7 +7,6 @@ A light weight blueprint for building decentralized apps
 - TypeScript
 - React/NextJS
 - TailwindCSS
-- Framer motion
 - Connectkit
 - Viem
 - Wagmi
