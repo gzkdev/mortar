@@ -13,7 +13,7 @@ export default function Home() {
       </p>
       <div className="flex items-center gap-4 flex-wrap text-center">
         <a
-          href="http://"
+          href="https://github.com/gzkdev/mortar"
           target="_blank"
           rel="noopener noreferrer"
           className="py-2 px-4 rounded-full bg-zinc-200 text-zinc-600 hover:bg-zinc-200/50 transition flex-grow"
