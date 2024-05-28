@@ -1,6 +1,6 @@
 # Mortar
 
-A light weight blueprint for building decentralized apps
+A light weight starter kit for building decentralized apps
 
 ## Stack
 
